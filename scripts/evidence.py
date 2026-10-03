@@ -17,8 +17,8 @@ for title,cmd,expected in checks:
 env.update(JWT_SECRET=secrets.token_hex(32),SUBJECT_PEPPER=secrets.token_hex(32))
 r=subprocess.run([sys.executable,'resolve_secrets.py'],cwd=ROOT,env=env,capture_output=True,text=True); assert r.returncode==0
 lines.append(r.stdout.strip())
-(ROOT/'audit_log.jsonl').write_text('')
-write_audit(ROOT/'audit_log.jsonl',actor='synthetic-partner',action='triage',resource='synthetic-clinic',outcome='allowed',trace_id='synthetic-trace')
+(ROOT/'docs/audit_sample.jsonl').write_text('')
+write_audit(ROOT/'docs/audit_sample.jsonl',actor='synthetic-partner',action='triage',resource='synthetic-clinic',outcome='allowed',trace_id='synthetic-trace')
 (ROOT/'docs/evidence.txt').write_text('\n'.join(lines)+'\n')
 print('\n'.join(lines))
 
