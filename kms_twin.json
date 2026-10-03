@@ -1,0 +1,6 @@
+{
+  "azure": "Key Vault: managed identity retrieves secrets; customer managed encryption keys via Key Vault keys",
+  "aws": "Secrets Manager stores secrets encrypted by KMS; scoped IAM role retrieves them",
+  "fallback": "Local process environment injection for lab only; missing values stop startup",
+  "status": "Design equivalence only. No cloud vault or encryption-at-rest deployment is claimed."
+}
