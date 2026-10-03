@@ -1,0 +1,37 @@
+{
+  "rights_owner": "Designated AfyaPlus privacy lead (appointment pending)",
+  "datasets": [
+    {
+      "name": "triage_messages",
+      "purpose": "human reviewed recommendations",
+      "personal_data": true,
+      "location": "runtime storage; lab fixtures only in repository",
+      "access": "assigned authorised staff",
+      "external_transfer": "none in lab"
+    },
+    {
+      "name": "patient_identifiers",
+      "purpose": "rights matching using keyed pseudonyms",
+      "personal_data": true,
+      "location": "runtime storage; lab fixtures only in repository",
+      "access": "assigned authorised staff",
+      "external_transfer": "none in lab"
+    },
+    {
+      "name": "MCP_queries",
+      "purpose": "clinic scoped service requests",
+      "personal_data": true,
+      "location": "runtime storage; lab fixtures only in repository",
+      "access": "assigned authorised staff",
+      "external_transfer": "none in lab"
+    },
+    {
+      "name": "audit_logs",
+      "purpose": "accountability without clinical payloads",
+      "personal_data": true,
+      "location": "runtime storage; lab fixtures only in repository",
+      "access": "assigned authorised staff",
+      "external_transfer": "none in lab"
+    }
+  ]
+}

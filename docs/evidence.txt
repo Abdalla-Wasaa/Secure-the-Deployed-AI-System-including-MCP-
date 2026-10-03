@@ -1,0 +1,5 @@
+Missing-secret failure: exit 1; JWT_SECRET missing or shorter than 32 bytes
+HTTPS pass: exit 0; PASS
+HTTP production denial: exit 1; DENIED
+Lab loopback: exit 0; PASS
+Resolved references: JWT_SECRET, SUBJECT_PEPPER
