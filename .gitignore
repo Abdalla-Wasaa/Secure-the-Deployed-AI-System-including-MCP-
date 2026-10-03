@@ -1,0 +1,15 @@
+.env
+*.env
+.env.*
+!.env.example
+secrets/
+*secret*.key
+*tokens*
+*credentials*
+.claude/
+CLAUDE.md
+AGENTS.md
+__pycache__/
+.pytest_cache/
+.venv/
+runtime/
