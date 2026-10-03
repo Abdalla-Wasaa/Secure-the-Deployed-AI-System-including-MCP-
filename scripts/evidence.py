@@ -34,4 +34,4 @@ with tempfile.TemporaryDirectory() as temp:
     assert erase('synthetic-subject',store,ledger,verified=True)['count']==1
     assert access('synthetic-subject',store,verified=True)==[]
     # Publish synthetic deletion evidence only, never the disposable pepper.
-    (ROOT/'deletion_records.jsonl').write_text(ledger.read_text())
+    (ROOT/'docs/deletion_sample.jsonl').write_text(ledger.read_text())

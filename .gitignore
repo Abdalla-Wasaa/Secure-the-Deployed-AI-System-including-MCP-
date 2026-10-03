@@ -1,8 +1,10 @@
 .env
 *.env
 .env.*
-!.env.example
-secrets/
+secrets
+secrets.*
+*.key
+*.pem
 *secret*.key
 *tokens*
 *credentials*

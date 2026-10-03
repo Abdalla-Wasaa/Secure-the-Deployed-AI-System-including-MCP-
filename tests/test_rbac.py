@@ -31,3 +31,10 @@ def test_mcp(client,token):
     body['params']['arguments']['clinic_id']='VIH-01'
     assert client.post('/mcp',headers=token('admin'),json=body).status_code==403
     assert client.post('/mcp',headers=token('unknown'),json={'id':1,'method':'tools/list'}).status_code==403
+
+
+def test_mcp_invalid_and_minimal_listing(client,token):
+    assert client.post('/mcp',headers=token(),json={'id':1,'method':'tools/call','params':{'name':[]}}).status_code==400
+    response=client.post('/mcp',headers=token(),json={'id':1,'method':'tools/list'})
+    assert [t['name'] for t in response.json()['result']['tools']]==['check_stock']
+    assert 'VIH-01' not in response.text

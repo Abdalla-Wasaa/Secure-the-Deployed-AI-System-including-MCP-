@@ -18,3 +18,16 @@ def test_boot_fail_closed(monkeypatch):
         async def boot():
             async with app.router.lifespan_context(app): pass
         asyncio.run(boot())
+
+
+def test_startup_rejects_production_http(monkeypatch):
+    import asyncio
+    import secrets
+    from app import app
+    monkeypatch.setenv('JWT_SECRET',secrets.token_hex(32))
+    monkeypatch.setenv('SUBJECT_PEPPER',secrets.token_hex(32))
+    monkeypatch.setenv('PARTNER_URL','http://api.afyaplus.ke')
+    monkeypatch.setenv('APP_ENV','production')
+    async def boot():
+        async with app.router.lifespan_context(app): pass
+    with pytest.raises(RuntimeError): asyncio.run(boot())
