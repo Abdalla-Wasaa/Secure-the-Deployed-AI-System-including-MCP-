@@ -1,0 +1,22 @@
+{
+  "triage_messages": {
+    "days": 90,
+    "rationale": "Proposed teaching period; legal review pending"
+  },
+  "patient_identifiers": {
+    "days": 90,
+    "rationale": "Proposed teaching period; legal review pending"
+  },
+  "MCP_queries": {
+    "days": 30,
+    "rationale": "Proposed teaching period; legal review pending"
+  },
+  "audit_logs": {
+    "days": 180,
+    "rationale": "Proposed teaching period; legal review pending"
+  },
+  "deletion_records": {
+    "days": null,
+    "rationale": "Proposed teaching period; legal review pending"
+  }
+}

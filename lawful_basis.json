@@ -1,0 +1,9 @@
+{
+  "notice": "Legal review pending.",
+  "status": "Teaching example only; no regulator approval or certification",
+  "proposed_basis": {
+    "triage": "Appropriate healthcare processing basis and sensitive-data condition require legal assessment",
+    "audit": "Accountability and security purpose subject to necessity review"
+  },
+  "finance_statement": "The system recommends rather than decides and must remain under human oversight."
+}
